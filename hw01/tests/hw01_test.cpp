@@ -18,6 +18,7 @@ TEST(Hw01Tests, Test2)
 TEST(Hw01Tests, Test3)
 {
     const auto expected = -1;
+
     const auto actual = hw01(2, 11);
     EXPECT_EQ(expected, actual);
 }

@@ -9,8 +9,10 @@ int hw01(int start, int end)
   }
 
   for (int i = start; i <= end; i++) {
+//work work work
     if(IsSimpleNum(i)) {
       result = result + (i % 10 + i / 10);
+
     }
   }
   return result;

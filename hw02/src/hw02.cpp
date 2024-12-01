@@ -1,7 +1,18 @@
-#include <hw02.h>
+#include "../src/include/hw02.h"
+#include <iostream>
+#include <string>
+#include <set>
+using namespace std;
 
-std::string hw02(std::string input_str)
+string hw02(string input_str)
 {
-    // Write code here..
+    set<char> simb_input_str;
+    string str;
+    for (auto itr = input_str.begin(); itr != input_str.end(); itr++) {
+      if (input_str.find(*itr) == string::npos) {
+        input_str.erase(itr);
+      }
+    }
+
     return input_str;
 }

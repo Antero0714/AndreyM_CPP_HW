@@ -1,5 +1,5 @@
-#include <hw02.h>
-#include <gtest/gtest.h>
+#include "../src/include/hw02.h"
+#include "../gtest/gtest.h"
 
 TEST(Hw02Tests, Test1)
 {

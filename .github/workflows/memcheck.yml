@@ -13,7 +13,7 @@ jobs:
   memcheck:
     runs-on: ubuntu-20.04
 
-    steps:
+    steps: 
 
       - name: check out code
         uses: actions/checkout@v3

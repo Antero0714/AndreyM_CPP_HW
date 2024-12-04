@@ -1,0 +1,10 @@
+# ninja log v6
+1	5	1731591166491370564	clean	c789849f31ee099f
+3	4183	1731591167016234371	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	ac9373dc41a577d1
+1	7822	1731591167014234890	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	36b65b26646dd44a
+2	4488	1731591167015234630	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	ac1e0b64c02230cc
+7822	7885	1731591174835191951	lib/libgtestd.a	a7100cf534180156
+7887	7904	1731591174901174628	lib/libgtest_maind.a	1f9748b94359ccc5
+7922	7931	1731591174933166228	lib/libgmock_maind.a	10659af39c3043df
+2	5384	1731591167015234630	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	34fee58b0b94ac5a
+7886	7922	1731591174899175153	lib/libgmockd.a	e90708885401b39a

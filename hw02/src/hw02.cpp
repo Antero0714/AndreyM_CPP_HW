@@ -11,7 +11,7 @@ string hw02(string input_str)
     string str;
     for (auto itr = input_str.begin(); itr != input_str.end(); itr++) {
       if (input_str.find(*itr) == string::npos) {
-        input_str.erase(itr); 
+        input_str.erase(itr);
       }
     }
 

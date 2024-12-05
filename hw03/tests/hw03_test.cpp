@@ -1,4 +1,4 @@
-#include "/home/andrey/Desktop/AndreyM_CPP_HW/hw03/src/include/hw03.h"
+#include <hw03.h>
 #include <gtest/gtest.h>
 
 TEST(Hw03Tests, Test1)

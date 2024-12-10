@@ -8,9 +8,8 @@ using namespace std;
 string hw02(string input_str)
 {
     set<char> simb_input_str;
-    string str;
     for (auto itr = input_str.begin(); itr != input_str.end(); itr++) {
-      if (input_str.find(*itr) == string::npos) {
+      if (simb_input_str.find(*itr) == simb_input_str.end()) {
         input_str.erase(itr);
       }
     }

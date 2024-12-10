@@ -2,3 +2,6 @@ build/*
 external/googletest/*
 .vscode/*
 Testing/*
+.idea/*
+/cmake-build-debug/build.ninja
+.cmake-build-debug/

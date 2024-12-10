@@ -1,6 +1,5 @@
 #include "../src/include/hw02.h"
 #include <gtest/gtest.h>
-
 TEST(Hw02Tests, Test1)
 {
     const auto expected = "Helo";

@@ -1,5 +1,7 @@
 #include "../src/include/hw01.h"
 
+bool IsSimpleNum(int i);
+
 int hw01(int start, int end)
 {
   int result = 0;

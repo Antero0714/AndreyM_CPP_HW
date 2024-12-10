@@ -13,6 +13,6 @@ string hw02(string input_str)
         input_str.erase(itr);
       }
     }
-
+// 6
     return input_str;
 }

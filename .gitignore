@@ -5,3 +5,4 @@ Testing/*
 .idea/
 .idea/editor.xml
 .idea/vcs.xml
+.idea/modules.xml

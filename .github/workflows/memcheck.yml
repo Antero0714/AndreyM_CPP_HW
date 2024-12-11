@@ -1,4 +1,4 @@
-name: CPP homework tests
+name: Check Memory Leaks
 
 on:
   push:
@@ -7,10 +7,10 @@ on:
 
 env:
   # CMake build type: Release, Debug, RelWithDebInfo
-  BUILD_TYPE: Release
+  BUILD_TYPE: Debug
 
 jobs:
-  build:
+  memcheck:
     runs-on: ubuntu-20.04
 
     steps:
@@ -18,12 +18,17 @@ jobs:
       - name: check out code
         uses: actions/checkout@v3
 
+      - name: install valgrind
+        run: sudo apt-get -qq update && sudo apt-get install -qq valgrind
+
       - name: configure CMake
-        run: cmake -Bbuild -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+        run: cmake -Bbuild -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DENABLE_MEMCHECK=ON
 
       - name: CMake build
         run: cmake --build build --config $BUILD_TYPE
 
-      - name: run unit tests
-        run: |
-          ctest --test-dir build -C $BUILD_TYPE -VV
+      - name: Run CTest with MemCheck
+        working-directory: ${{github.workspace}}/build
+        run: >
+          ctest -VVV -C $BUILD_TYPE -D ExperimentalMemCheck --output-on-failure 
+          --overwrite MemoryCheckCommandOptions="--tool=memcheck --leak-check=full --error-exitcode=100"

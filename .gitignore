@@ -2,4 +2,4 @@ build/*
 external/googletest/*
 .vscode/*
 Testing/*
-.idea/
+.idea

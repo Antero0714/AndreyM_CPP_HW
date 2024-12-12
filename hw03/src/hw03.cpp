@@ -1,6 +1,5 @@
 #include <cstring>
 #include <string>
-#include "hw03.cpp"
 using namespace std;
 
 void hw03(char *str, const char *pattern) {

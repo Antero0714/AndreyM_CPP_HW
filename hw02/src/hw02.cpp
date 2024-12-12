@@ -5,14 +5,14 @@
 //1
 using namespace std;
 
-string hw02(string input_str)
-{
-    set<char> simb_input_str;
-    for (auto itr = input_str.begin(); itr != input_str.end(); itr++) {
-      if (simb_input_str.find(*itr) == simb_input_str.end()) {
-        input_str.erase(itr);
-      }
+string hw02(const string str) {
+  std::string result;
+
+  for (char c : str) {
+    if (result.find(c) == std::string::npos) {
+      result += c;
     }
-// 6
-    return input_str;
+  }
+
+  return result;
 }

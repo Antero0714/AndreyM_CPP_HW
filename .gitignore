@@ -2,3 +2,6 @@ build/*
 external/googletest/*
 .vscode/*
 Testing/*
+,idea/
+.idea/editor.xml
+.idea/codeStyles/codeStyleConfig.xml

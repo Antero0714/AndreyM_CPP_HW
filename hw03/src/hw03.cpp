@@ -3,32 +3,14 @@
 #include <string>
 using namespace std;
 
-void hw03(char* str, const char* pattern)
-{
-  if (str == nullptr || pattern == nullptr) {
-    return;
+void hw03(char *str, const char *pattern) {
+  string str1(str);
+  size_t finder = str1.find(pattern);
+
+  while (finder != std::string::npos) {
+    str1.erase(finder, strlen(pattern));
+    finder = str1.find(pattern);
   }
 
-  // Если строка или шаблон пусты, ничего не делаем
-  if (*str == '\0' || *pattern == '\0') {
-    return;
-  }
-     const char* ptr_itr = pattern;
-     char* first_ch = str+strlen(ptr_itr);
-     char* last_ch = str+strlen(ptr_itr);
-
-     bool isEqviv = true;
-    for(char* str_itr = str; *str_itr != '\0'; str_itr++) {
-      for(int i = 0; ptr_itr[i] != '\0'; i++) {
-        if(*str_itr != *ptr_itr) {
-          isEqviv = false;
-          break;
-        }
-        if(isEqviv) {
-          memmove(str_itr, first_ch, strlen(first_ch+1));
-      }
-
-  }
-
-}
+  strncpy(str, str1.c_str(), str1.size() + 1);
 }

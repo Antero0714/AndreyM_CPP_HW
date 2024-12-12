@@ -4,3 +4,4 @@ external/googletest/*
 Testing/*
 ,idea/
 .idea/editor.xml
+.idea/codeStyles/codeStyleConfig.xml

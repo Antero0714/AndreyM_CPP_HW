@@ -14,3 +14,4 @@ void hw03(char *str, const char *pattern) {
 
   strncpy(str, str1.c_str(), str1.size() + 1);
 }
+//1

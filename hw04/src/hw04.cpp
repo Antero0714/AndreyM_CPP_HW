@@ -2,6 +2,42 @@
 #include <iostream>
 using namespace std;
 
+std::size_t hw04(const int* input_array, std::size_t elem_count) {
+  if (input_array[0] < 0) {
+    return 0;
+  }
+
+  std::size_t sum = 0;
+  int size_output_array = 1;
+  int* p_output_array = new int[size_output_array]{};
+
+  for(int i = 0; i < elem_count; i++) {
+    if(i > size_output_array) {
+      size_output_array = i*2;
+      int* new_array = new int[size_output_array];
+      copy(p_output_array, p_output_array + size_output_array, new_array);
+      delete[] p_output_array;
+      p_output_array = new_array;
+    }
+
+    if(input_array[i] > 0) {
+      sum += input_array[i];
+      p_output_array[i] = input_array[i];
+    }
+    else {
+      return sum;
+    }
+  }
+  return sum;
+}
+
+
+
+
+
+
+/*using namespace std;
+
 std::size_t hw04(const int* input_array, std::size_t elem_count)
 {
   int* out_data = new int[1];
@@ -28,4 +64,4 @@ std::size_t hw04(const int* input_array, std::size_t elem_count)
   }
   delete[] out_data;
   return sum;
-}
+}*/

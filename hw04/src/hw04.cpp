@@ -12,12 +12,13 @@ std::size_t hw04(const int* input_array, std::size_t elem_count) {
   int* p_output_array = new int[size_output_array]{};
 
   for(int i = 0; i < elem_count; i++) {
-    if(i > size_output_array) {
+    if(i+1 > size_output_array) {
       size_output_array = i*2;
       int* new_array = new int[size_output_array];
       copy(p_output_array, p_output_array + i, new_array);
       delete[] p_output_array;
       p_output_array = new_array;
+
     }
 
     if(input_array[i] > 0) {

@@ -5,7 +5,7 @@ using namespace std;
 std::size_t hw04(const int* input_array, std::size_t elem_count) {
   if (input_array[0] < 0 || input_array == nullptr || elem_count < 1) {
     return 0;
-  }
+  } //1
 
   std::size_t sum = 0;
   int size_output_array = 1;

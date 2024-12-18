@@ -26,9 +26,13 @@ std::size_t hw04(const int* input_array, std::size_t elem_count) {
       p_output_array[i] = input_array[i];
     }
     else {
+      delete[] p_output_array;
+      p_output_array = nullptr;
       return sum;
     }
   }
+  delete[] p_output_array;
+  p_output_array = nullptr;
   return sum;
 }
 

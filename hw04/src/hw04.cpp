@@ -18,6 +18,7 @@ std::size_t hw04(const int* input_array, std::size_t elem_count) {
       copy(p_output_array, p_output_array + size_output_array, new_array);
       delete[] p_output_array;
       p_output_array = new_array;
+      new_array = nullptr;
     }
 
     if(input_array[i] > 0) {

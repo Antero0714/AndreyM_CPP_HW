@@ -3,7 +3,7 @@
 using namespace std;
 
 std::size_t hw04(const int* input_array, std::size_t elem_count) {
-  if (input_array[0] < 0) {
+  if (input_array[0] < 0 || input_array == nullptr || elem_count < 1) {
     return 0;
   }
 
@@ -13,12 +13,11 @@ std::size_t hw04(const int* input_array, std::size_t elem_count) {
 
   for(int i = 0; i < elem_count; i++) {
     if(i > size_output_array) {
-      size_output_array = i*2;//5
       int* new_array = new int[size_output_array];
       copy(p_output_array, p_output_array + size_output_array, new_array);
+      size_output_array = i*2;//5
       delete[] p_output_array;
       p_output_array = new_array;
-      new_array = nullptr;
     }
 
     if(input_array[i] > 0) {
